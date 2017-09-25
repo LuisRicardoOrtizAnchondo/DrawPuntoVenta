@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1 Usuarios
+  table
+    thead
+      tr
+        th Nombre
+        th Apellido(s)
+        th Correo
+        th Opciones
+    tbody
+      each usuario in usuarios
+        tr
+          td #{usuario.nombre}
+          td #{usuario.apellidos}
+          td #{usuario.correo}
+          td

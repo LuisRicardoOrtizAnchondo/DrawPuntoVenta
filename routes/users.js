@@ -7,4 +7,6 @@ router.get('/', usersController.index);
 
 router.get('/show', usersController.show);
 
+router.get('/create', usersController.create);
+
 module.exports = router;

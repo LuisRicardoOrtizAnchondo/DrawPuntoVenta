@@ -11,12 +11,12 @@ block content
         th Correo
         th Opciones
     tbody
-      each usuario in usuarios
+      each user in users
         tr
-          th(scope="row") #{usuario.id}
-          td #{usuario.nombre}
-          td #{usuario.apellidos}
-          td #{usuario.correo}
+          th(scope="row") #{user._id}
+          td #{user.name}
+          td #{user.lastName}
+          td #{user.email}
           td
             button(class='btn btn-primary btn-sm')
               span(class='fa fa-pencil')

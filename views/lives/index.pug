@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  h1 Vida
+  table(class='table table-striped table-hover')
+    thead(class='thead-inverse')
+      tr
+        th #
+        th Nombre
+        th Hash espiritual
+        th Es planta o animal?
+        th Opciones
+    tbody
+      each life in lives
+        tr
+          th(scope="row") #{life._id}
+          td #{life.name}
+          td #{life.spiritHash}
+          td #{life.plantOrAnimal}
+          td
+            button(class='btn btn-primary btn-sm')
+              span(class='fa fa-pencil')
+            button(class='btn btn-danger btn-sm')
+              span(class='fa fa-trash')

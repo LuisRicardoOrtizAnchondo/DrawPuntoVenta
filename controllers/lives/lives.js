@@ -1,11 +1,11 @@
 const express = require('express')
-const User = require('../../models/user');
+const Life = require('../../models/life');
 
 
 function index(req, res, next) {
-  User.find({}, (err, result) => {
-    res.render('users/index', {
-      users: result
+  Life.find({}, (err, result) => {
+    res.render('lives/index', {
+      lives: result
     });
   });
 }
@@ -16,16 +16,16 @@ function show(req, res, next) {
 
 
 function create(req, res, next) {
-  let user = new User({
+  let life = new Life({
     name: "Richi",
-    lastName: "Ortíz",
-    email: "a291540@uach.mx"
+    spiritHash: "iqoasdj8a9yxiue",
+    plantOrAnimal: "Human"
   });
-  user.save((err) => {
+  life.save((err) => {
     if (err) {
       res.send('error!!!!');
     } else {
-      res.render('users/create');
+      res.render('lives/create');
     }
   });
 

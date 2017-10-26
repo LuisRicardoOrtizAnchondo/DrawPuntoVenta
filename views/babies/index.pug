@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  h1 Bebés
+  table(class='table table-striped table-hover')
+    thead(class='thead-inverse')
+      tr
+        th #
+        th Nombre
+        th Apellido(s)
+        th Meses
+        th Opciones
+    tbody
+      each baby in babies
+        tr
+          th(scope="row") #{baby._id}
+          td #{baby.name}
+          td #{baby.lastName}
+          td #{baby.months}
+          td
+            button(class='btn btn-primary btn-sm')
+              span(class='fa fa-pencil')
+            button(class='btn btn-danger btn-sm')
+              span(class='fa fa-trash')

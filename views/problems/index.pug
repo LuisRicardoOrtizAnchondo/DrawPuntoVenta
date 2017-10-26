@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  h1 Problemas
+  table(class='table table-striped table-hover')
+    thead(class='thead-inverse')
+      tr
+        th #
+        th Nombre
+        th Descripción
+        th Solución
+        th Opciones
+    tbody
+      each problem in problems
+        tr
+          th(scope="row") #{problem._id}
+          td #{problem.name}
+          td #{problem.lastName}
+          td #{problem.email}
+          td
+            button(class='btn btn-primary btn-sm')
+              span(class='fa fa-pencil')
+            button(class='btn btn-danger btn-sm')
+              span(class='fa fa-trash')
